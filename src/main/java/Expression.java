@@ -23,4 +23,18 @@ public class Expression {
     public void addNewExpressionElement(ExpressionElement newElement){
         expElements.add(newElement);
     }
+
+    public void removeLastExpressionElement(){
+        if (!expElements.isEmpty()){
+            expElements.remove(expElements.size() -1);
+        }
+    }
+
+    public String getFullExpression(){
+        String expression = "";
+        for (int i = 0; i < expElements.size(); i++){
+            expression = expression + expElements.get(i).getExpressionElement();
+        }
+        return expression;
+    }
 }

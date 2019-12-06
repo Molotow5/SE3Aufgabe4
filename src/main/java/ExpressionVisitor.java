@@ -50,5 +50,9 @@ public abstract class ExpressionVisitor {
         syntaxCheck = true;
     }
 
+    public String getLastVisitedExpression(){
+        return expression;
+    }
+
     public abstract void finishedVisit() throws ScriptException;
 }
